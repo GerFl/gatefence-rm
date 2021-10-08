@@ -1,0 +1,27 @@
+{
+  "name": "gatefence-rm",
+  "version": "1.0.0",
+  "description": "Rediseño de una página web fea",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GerFl/gatefence-rm.git"
+  },
+  "keywords": [
+    "Gulp"
+  ],
+  "author": "Gerardo Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GerFl/gatefence-rm/issues"
+  },
+  "homepage": "https://github.com/GerFl/gatefence-rm#readme",
+  "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0"
+  }
+}
