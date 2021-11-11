@@ -1,0 +1,167 @@
+/* GLOBALES */
+h1,h2{
+	font-family:var(--besley);
+	text-align: center;
+}
+h2{
+	font-size:2rem;
+}
+p,li{
+	font-size:1.8rem;
+}
+h3,
+input,
+a,
+p,
+li{
+	font-family:var(--nanum);
+	color:var(--oscuro);
+	line-height: 1.5;
+}
+li{
+	line-height: 2;
+}
+a{
+	text-decoration: none;
+}
+.contenedor{
+	width:95%;
+	height:100%;
+	padding:1rem;
+	margin: 0 auto;
+}
+header{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--header);
+    padding:1rem;
+    div{
+    	display:inherit;
+    }
+    img.logo{
+    	height:21rem;
+    }
+    h2{
+		text-align: center;
+		align-self: center;	
+    }
+}
+
+nav{
+	display:flex;
+	justify-content: space-between;
+	align-self: center;
+	width:95%;
+	a,p{
+		display:block;
+		align-self: center;	
+		font-size:1.5rem;
+		font-weight: 700;
+		text-align:center;
+		padding: 1rem;
+		&:hover{
+			background-color: var(--violeta);
+			color:var(--claro);
+			transtion:.3s ease-in-out;
+			cursor:pointer;		
+		}
+	}
+	.dropdown-box:hover{
+		a,p{
+			background-color: var(--violeta);
+			color:var(--claro);
+			transtion:.3s ease-in-out;
+			cursor:pointer;		
+		}
+	}
+}
+
+footer{
+	padding:5rem;
+	text-align: center;
+	background-color: var(--oscuro);
+	nav{
+		justify-content: space-evenly;
+		width:70rem;
+		margin: 0 auto;
+		a:hover{
+			color:var(--alerta);
+			background-color: transparent;
+			transition:.3s ease-in-out;
+		}
+	}
+	a, p{
+		color:var(--claro);
+	}
+	a{
+		font-size:2rem;
+	}
+	p{
+		font-size:1.2rem;
+	}
+}
+
+/* MENU */
+div.dropdown-box{
+	position:relative;
+	height:4rem;
+	a, p{
+		text-align: left;
+	}
+}
+
+div.purple-box{
+	position:absolute;
+	display:none;
+	width:40rem;
+	padding:2rem;
+	text-align: left;
+	background-color: var(--violeta);
+	top:75%;
+	&.otherside{
+		right:0;
+	}
+}
+
+div.dropdown-box:hover{
+	div.purple-box{
+		display:block;
+	}
+	div.purple-box.grid{
+		display:grid;
+		grid-template-columns: repeat(3,1fr);
+	}	
+	a, p{
+		color:var(--claro)!important;
+	}
+}
+
+div.dropdown-list{
+	.purple-box{
+		display:none!important;
+	}
+	&:hover .purple-box{
+		display:flex!important;
+		flex-direction: column;
+		top:0;
+		width:30rem;
+		left:15rem;
+	}
+}
+
+div.barra-busqueda{
+	display: flex;
+	justify-content: flex-end;
+	margin:3rem;
+	input{
+		width:17rem;
+		height:3rem;
+		font-size:1.3rem;
+	}
+	i{
+		font-size:2rem;
+		align-self: center;
+		margin:0 0.5rem;
+	}
+}
