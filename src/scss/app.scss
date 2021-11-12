@@ -16,6 +16,9 @@ html {
 }
 
 /* MAIN */
+main{
+	text-align:center;
+}
 
 div.carrusel{
 	display:flex;
@@ -31,16 +34,63 @@ div.carrusel{
 
 div.block{
 	background-color:var(--oscuro);
+	a{
+		color:var(--claro);
+		height:5rem;
+		align-self:center;
+	}
 	&.claro{
 		background-color:var(--claro);
+		a{
+			color:var(--oscuro);
+			margin:0;
+		}
 	}
 }
 div.block .showcase{
 	display:flex;
+	justify-content:space-between;
 	height:100%;
 }
+.showcase.vertical{
+	flex-direction:column;
+}
+.showcase.buttons{
+	justify-content:center;
+	margin:3rem auto;
+	button{
+		margin:1rem;
+		width:12rem;
+		height:6rem;
+		font-size:1.8rem;
+		background:transparent;
+		font-family: var(--nanum);
+		color:var(--oscuro);
+		background-color: var(--claro);
+		border:1px solid var(--claro);
+		cursor:pointer;
+		&.inverso{
+			border:none;
+			background-color: var(--oscuro);
+			color:var(--claro);
+		}
+	}
+}
+p.tag{
+	background-color:var(--claro);
+	color:var(--oscuro)!important;
+	padding:1rem;
+}
+.selling{
+	h3{
+		color: var(--claro);
+	}
+}
 div.block {
-	height:23rem;
+	height:25rem;
+	&.selling{
+		height:100%;
+	}
 	&.claro{
 		p{
 			color:var(--oscuro);
@@ -56,9 +106,23 @@ div.block {
 	img{
 		width:50rem;
 		margin:1rem;
+		&.loop{
+			width:15rem;
+			height:15rem;
+			&.force{
+				margin:auto 5rem;
+				width:21rem;
+				height:21rem;
+			}
+		}
 	}
-	h2{
+	h2,h3{
 		font-size:2rem;
+		text-align:center;
+		align-self:center;
+		&.claro{
+			color:var(--claro);
+		}
 	}
 	li{
 		font-size:1.6rem;
@@ -66,6 +130,48 @@ div.block {
 	}
 }
 
-*{
-	outline:1px solid pink;
+aside{
+	width:10rem;
+	margin:1rem;
+}
+section.products-grid{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:2rem;
+	margin:0 auto;
+}
+.product{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	padding:1rem;
+	&.horizontal{
+		flex-direction:row;
+	}
+	img{
+		width:15rem;
+		margin:0 auto;
+	}
+	p,li{
+		line-height:1;
+	}
+	li{
+		font-size:1.6rem;
+	}
+	h3{
+		font-size:1.8rem;
+	}
+	p{
+		font-size:1.4rem;
+		margin:1rem;
+	}
+}
+
+p.price{
+	font-size:1.4rem;
+	margin:1rem;
+	color:var(--verde)!important;
+	font-weight: 700;
+	font-size: 1.8rem;
+	margin:auto;
 }

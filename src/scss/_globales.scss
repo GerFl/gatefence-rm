@@ -29,6 +29,10 @@ a{
 	height:100%;
 	padding:1rem;
 	margin: 0 auto;
+	&.products{
+		display: flex;
+		padding:0;
+	}
 }
 header{
 	display:flex;
@@ -78,6 +82,7 @@ nav{
 }
 
 footer{
+	margin-top:1rem;
 	padding:5rem;
 	text-align: center;
 	background-color: var(--oscuro);
